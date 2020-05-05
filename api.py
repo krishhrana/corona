@@ -14,7 +14,7 @@ app=Flask(__name__)
 
 # load the model, and pass in the custom metric function
 global graph
-model = load_model('/covidlarge.h5')
+model = load_model('covidlarge19.h5')
 
 # initialize these variables
 
@@ -25,7 +25,7 @@ def convertImage(imgData1):
         output.write(base64.b64decode(imgstr))
 
 
-upload_folder='/uploads'
+upload_folder='uploads'
 allowed_extensions={'txt','pdf','png','jpg','jpeg'}
 app.config['upload_folder']=upload_folder
 
