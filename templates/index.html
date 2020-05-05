@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<title>Document</title>
+	
+	<style>
+		body{
+			background-image: url("bg.jpg");
+
+/* Full height */
+font-family: poppins;
+
+/* Center and scale the image nicely */
+
+background-repeat: no-repeat;
+background-size: cover;
+}
+:root {
+	--font: 1rem/1.2 "helvetica", sans-serif;
+	--bg-hover: linear-gradient(
+		135deg,
+		#101ee7 0%,
+		#2654e9 20%,
+		#62d6fa 37%,
+		#fff 50%,
+		#fc35ca 66%,
+		#7559ff 72%,
+		#101ee7 100%
+	);
+   
+	--btn-color: #2e175e;
+}
+
+.btn {
+            border-radius: 30px;
+	display: table;
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+	font: var(--font);
+	font-weight: bold;
+	padding: 22px 40px;
+	background-color: var(--btn-color);
+	overflow: hidden;
+	margin: 24px;
+    position: relative;
+    left: 84%;
+	top: 300px;
+}
+.--animated {
+	transition: all 1s;
+}
+.--animated span {
+	position: relative;
+	z-index: 9;
+}
+
+.--animated:after {
+	height: 100%;
+	width: 2000px;
+	transition: all 1s;
+	background: var(--bg-hover);
+}
+
+.--animated:before {
+	height: 26px;
+	width: 100%;
+	top: -50px;
+	z-index: 10;
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.--animated:hover:before {
+	top: 0;
+	opacity: 1;
+}
+.--animated:hover:after {
+	left: -1750px;
+}
+.--animated:before,
+a:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	display: block;
+	content: "";
+}
+.--animated:active:before {
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.--animated:active {
+	transform: scale(0.95);
+	transition: all 200ms;
+}
+	
+	</style>
+</head>
+<body>
+
+	<div class="background">
+		<a href="http://127.0.0.1:5000/login" target="_blank" class="btn --animated">
+			<span>Let's Start </span>
+		</a>
+	</div>
+</body>
+</html>
