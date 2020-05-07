@@ -59,8 +59,8 @@ def upload_file():
                 k='Negative'
                 result='ABSENT'
             elif int_pred==2:
-                k='Negative but Pneumonia'
-                result='ABSENT BUT THERE ARE CHANCES OF PNEUMONIA'
+                k='Pneumonia'
+                result='HIGH BECAUSE YOU HAVE PNEUMONIA'
         return render_template("page2.html", value=k, result=result)
 
     return render_template("login.html")
